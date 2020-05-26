@@ -8,9 +8,11 @@
 
 
 class SecretHandshake
+  attr_reader :binar
   def initialize(number)
     @binar = number.to_s(2).reverse.split(//).map(&:to_i)
-
+    rescue ArgumentError
+    @binar = 0
   end
 
   def commands
@@ -31,14 +33,3 @@ class SecretHandshake
     ['wink', 'double blink', 'close your eyes', 'jump']
   end
 end
-
-a = SecretHandshake.new(31)
-b = SecretHandshake.new(19)
-c = SecretHandshake.new(9)
-d = SecretHandshake.new(7)
-e = SecretHandshake.new(5)
-p a.commands
-p b.commands
-p c.commands
-p d.commands
-p e.commands
