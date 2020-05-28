@@ -9,10 +9,13 @@ To get started with TDD, see the `README.md` file in your
 class RunLengthEncoding
   def self.encode(text)
     text.each_char do |letter|
-      letter
+
     end
   end
 
   def self.decode(text)
+    text.each_char do |letter|
+      letter
+    end
   end
 end
